@@ -24,7 +24,7 @@ public class JobController {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(Model model, int id) {
 
-        // TODO #1 - get the Job with the given ID and pass it into the view
+        // TODO #1 - get the Job with the given ID and pass it into the view.
         Job job= jobData.findById(id);
         model.addAttribute("job", job);
         return "job-detail";
@@ -39,9 +39,9 @@ public class JobController {
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public String add(Model model, @Valid JobForm jobForm, Errors errors) {
 
-        // TODO #6 - Validate the JobForm model, and if valid, create a
+        // TODO #6 - Validate the JobForm model, and if valid, create
         // new Job and add it to the jobData data store. Then
-        // redirect to the job detail view for the new Job.
+        // redirect to the job detail view for the new Job
 
         if (! jobForm.getName().equals("")) {
             String name = jobForm.getName();
